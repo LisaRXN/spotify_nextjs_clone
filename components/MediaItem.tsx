@@ -21,7 +21,9 @@ const MediaItem: React.FC<MediaItemProps>= ({data, onClick}) => {
     }
 
     return(
-        <div className="
+        <div 
+        onClick={handleClick}
+        className="
         flex
         items-center
         gap-x-3

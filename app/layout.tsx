@@ -9,6 +9,7 @@ import ModalProvider from "@/providers/ModalProvider";
 import ToasterProvider from "@/providers/ToasterProvider";
 import getSongsByUserId from "@/actions/getSongsByUserId";
 import { revalidate } from './(site)/page';
+import Player from "@/components/Player";
 
 const font = Figtree({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default async function RootLayout({
           <UserProvider>
             <ModalProvider/>
             <Sidebar songs={userSongs}>{children}</Sidebar>
+            <Player/>
           </UserProvider>
         </SupabaseProvider>
       </body>
